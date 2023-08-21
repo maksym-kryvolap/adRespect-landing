@@ -1,0 +1,43 @@
+
+.realisation {
+  background-color: #dcc1ab;
+  padding-top: 120px;
+
+  &__title {
+    margin-left: 70px;
+    padding-bottom: 96px;
+
+    @include onMobile {
+      margin-left: 0;
+    }
+
+    &-name {
+      font-family: "Inter", sans-serif;
+      font-weight: 400;
+      font-style: 12px;
+      line-height: 18px;
+      color: $color-green;
+    }
+
+    &-text {
+      margin-top: 16px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+
+      @include onMobile {
+        font-size: 40px;
+        line-height: 42px;
+      }
+
+      @include onTablet {
+        font-size: 40px;
+        line-height: 42px;
+      }
+
+      @include onDesktop {
+        font-size: 48px;
+        line-height: 55px;
+      }
+    }
+  }
+}

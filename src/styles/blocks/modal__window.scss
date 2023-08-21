@@ -1,0 +1,26 @@
+
+.modal__window {
+  padding: 0;
+  border: 1px solid gray;
+  border-radius: 10px;
+
+  &-box {
+    padding: 1rem;
+    height: max-content;
+  }
+
+  &-photo {
+    max-height: 80vh;
+    max-width: 60vw;
+  }
+
+  &-button {
+    text-decoration: none;
+    border: 1px solid $color-green;
+    background: #fff;
+    outline: none;
+    border-radius: 200px;
+    padding: 5px 15px;
+    margin-top: 10px;
+  }
+}

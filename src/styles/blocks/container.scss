@@ -1,0 +1,28 @@
+
+.container {
+  &-fluid--background {
+    height: 810px;
+    background-color: #dcc1ab;
+    position: relative;
+
+    @include onMobile {
+      display: block !important;
+      height: 100%;
+    }
+
+    @include onTablet {
+      height: 100%;
+    }
+  }
+
+  &--size {
+    max-width: $window-wingth;
+    margin: 0 auto;
+
+    &-full {
+      max-width: 1440px;
+      background-color: #dcc1ab;
+      padding-bottom: 44px;
+    }
+  }
+}

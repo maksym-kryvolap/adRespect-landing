@@ -1,0 +1,150 @@
+.about {
+  display: flex;
+  color: $color-grey;
+  position: relative;
+  background-color: $color-green;
+  height: 720px;
+
+  @include onMobile {
+    display: block;
+    height: max-content;
+    padding-bottom: 40px;
+  }
+
+  &__photo {
+    background-image: url(/images/o-firmie-photo.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 720px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    @include onMobile {
+      position: relative;
+      width: 100vw;
+      height: 400px;
+    }
+
+  }
+
+  &__info {
+    height: max-content;
+    padding-left: 96px;
+    margin-top: 135px;
+
+    @include onMobile {
+      width: 100%;
+      padding: 0 10px;
+    }
+
+    @include onTablet {
+      width: 100%;
+      padding-left: 0;
+    }
+
+    @include onDesktop {
+      width: 100%;
+      max-width: 596px;
+      padding-left: 96px;
+    }
+
+    &-name {
+      font-family: "Inter", sans-serif;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    &-title {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      margin-top: 16px;
+
+      @include onMobile {
+        font-size: 40px;
+        line-height: 42px;
+      }
+
+      @include onTablet {
+        font-size: 40px;
+        line-height: 42px;
+      }
+
+      @include onDesktop {
+        font-size: 48px;
+        line-height: 55px;
+      }
+    }
+
+    &-text {
+      font-family: "Inter", sans-serif;
+      font-weight: 400;
+      margin-top: 40px;
+
+      @include onMobile {
+        font-size: 12px;
+        line-height: 20px;
+      }
+
+      @include onTablet {
+        font-size: 12px;
+        line-height: 20px;
+      }
+
+      @include onTablet {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    &-link {
+      font-family: "Inter", sans-serif;
+      font-weight: 400;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-decoration: none;
+      color: $color-grey;
+      border: 1px solid $color-grey;
+      border-radius: 200px;
+      margin-top: 72px;
+      transition: all 0.3s;
+
+      @include onMobile {
+        font-size: 12px;
+        line-height: 20px;
+        padding: 6px 12px;
+        width: 150px;
+        height: 40px;
+      }
+
+      @include onTablet {
+        font-size: 12px;
+        line-height: 20px;
+        padding: 6px 12px;
+        width: 150px;
+        height: 40px;
+      }
+
+      @include onDesktop {
+        font-size: 16px;
+        line-height: 24px;
+        padding: 12px 22px 14px;
+        width: 194px;
+        height: 50px;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      &-arrow {
+        height: 14px;
+        width: 14px;
+      }
+    }
+  }
+}

@@ -1,0 +1,182 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: 810px;
+  min-height: max-content;
+  max-width: 1440px;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+
+  @include onMobile {
+    max-height: max-content;
+    padding-top: 20px;
+  }
+
+  &__info {
+    box-sizing: border-box;
+    margin-top: 150px;
+    width: 600px;
+
+    @include onMobile {
+      margin-top: 100px;
+      width: 100%;
+    }
+
+    @include onTablet {
+      width: 100%;
+    }
+  }
+
+  &__tittle {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 70px;
+    margin-bottom: 44px;
+
+    @include onMobile {
+      width: 100%;
+      font-size: 28px;
+      padding-left: 20px;
+      letter-spacing: -.05rem;
+      line-height: 50px;
+    }
+
+    @include onTablet {
+      width: 100%;
+      font-size: 40px;
+      padding-left: 20px;
+    }
+
+    @include onDesktop {
+      font-weight: 500;
+      font-size: 60px;
+      line-height: 70px;
+      padding: 0;
+      margin-bottom: 44px;
+    }
+  }
+
+  &__text {
+    font-family: "Inter", sans-serif;
+
+    @include onMobile {
+      width: 100%;
+      font-size: 12px;
+      padding-left: 20px;
+      line-height: 20px;
+    }
+
+    @include onTablet {
+      width: 100%;
+      font-size: 12px;
+      padding-left: 20px;
+    }
+
+    @include onDesktop {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      width: 486px;
+      padding: 0;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Inter", sans-serif;
+
+    @include onMobile {
+      width: 100%;
+      font-size: 10px;
+      line-height: 12px;
+      padding: 0 10px;
+      margin: 40px 0;
+    }
+
+    @include onTablet {
+      width: 100%;
+      font-size: 12px;
+      line-height: 16px;
+      padding: 0 20px;
+      margin-top: 40px;
+    }
+
+    @include onDesktop {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      width: 493px;
+      margin-top: 72px;
+      padding: 0;
+    }
+  }
+
+  &__contact {
+    padding: 12px 24px 14px;
+    background-color: $color-green;
+    border-radius: 200px;
+    color: $color-grey;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    @include onTablet {
+      padding: 6px 12px;
+    }
+
+    @include onDesktop {
+      padding: 12px 24px 14px;
+    }
+  }
+
+  &__realis {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    border: 1px solid $color-green;
+    border-radius: 200px;
+    color: $color-green;
+    text-decoration: none;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    @include onMobile {
+      padding: 6px 12px;
+      align-items: center;
+    }
+
+    @include onTablet {
+      padding: 6px 12px;
+    }
+
+    @include onDesktop {
+      font-size: 16px;
+      padding: 12px 22px 14px;
+    }
+
+    &-text {
+      @include onMobile {
+        font-size: 12px;
+      }
+    }
+
+    &-logo {
+      @include onMobile {
+        height: 12px;
+        width: 12px;
+      }
+    }
+  }
+}

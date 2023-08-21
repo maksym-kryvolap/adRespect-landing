@@ -1,13 +1,354 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
-    <link rel="stylesheet" href="./styles/main.scss">
-  </head>
-  <body>
-    <h1>Hello Mate Academy</h1>
-    <script type="text/javascript" src="scripts/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>giardDesign</title>
+  <link rel="icon" href="./images/logo/logoHeader.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@500&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/macy@2.5.1/dist/macy.min.js"></script>
+  <script type="module" src="scripts/main.js"></script>
+  <link rel="stylesheet" href="./styles/main.scss">
+</head>
+
+<body class="align-items-center">
+  <header class="header" id="header">
+    <div class="nav">
+      <div class="nav__logo">
+        <a href="#" class="nav__logo-link">
+          <img src="/images/logo/logoHeader.svg" alt="logo">
+        </a>
+
+        <a href="#menu" class="nav__menu" id="menu-mobile"></a>
+
+        <label class="nav__label nav__label--mobile" id="label-mobile">
+          <input type="text" class="nav__input" id="input-mobile">
+        </label>
+      </div>
+
+
+      <div class="nav__item">
+        <select onchange="window.location.href = this.options[this.selectedIndex].value"
+          class="nav__link nav__link--select" name="oferta">
+          <option selected disabled>Oferta</option>
+          <option value="#oferta">Projekty</option>
+          <option value="#oferta">Wizualizacje</option>
+          <option value="#oferta">Realizacje</option>
+        </select>
+        <a href="#about" class="nav__link">O firmie</a>
+        <a href="#realisation" class="nav__link">Realizacje</a>
+        <a href="#contact" class="nav__link">Kontakt</a>
+        <label class="nav__label" id="label">
+          <input type="text" class="nav__input" autofocus id="input">
+        </label>
+      </div>
+      
+      <div class="menu" id="menu">
+        <a href="#" class="menu__cross"></a>
+
+        <div class="menu__item">
+          <select onchange="window.location.href = this.options[this.selectedIndex].value"
+          class="menu__link nav__link--select" name="oferta">
+          <option selected disabled>Oferta</option>
+          <option value="#oferta">Projekty</option>
+          <option value="#oferta">Wizualizacje</option>
+          <option value="#oferta">Realizacje</option>
+        </select>
+        <a href="#about" class="menu__link">O firmie</a>
+        <a href="#realisation" class="menu__link">Realizacje</a>
+        <a href="#contact" class="menu__link">Kontakt</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid container-fluid--background px-0">
+      <div class="row row--size px-0">
+        <div class="col px-0 col--size">
+          <div class="header__info">
+            <div class="header__tittle">
+              Nowoczesna aranżacja
+              <br>
+              Twojego ogrodu
+            </div>
+
+            <div class="header__text">
+              Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres
+              usług
+              </br>
+              z indywidualnym podejściem do każdego projektu.
+            </div>
+          </div>
+
+          <div class="header__buttons">
+            <a href="#contact" class="header__contact">Skontaktuj się z nami</a>
+            <a href="#realisation" class="header__realis">
+              <div class="header__realis-text">Zobacz nasze realizacje</div>
+              <img src="/images/button-realis-arrow.svg" alt="arrow" class="header__realis-logo">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <input type="radio" id="arrow-left" name="radio-btn" checked class="wrapper__input">
+        <input type="radio" id="arrow-right" name="radio-btn" class="wrapper__input">
+
+        <div class="wrapper__labels">
+          <label for="arrow-left" class="wrapper__label wrapper__label-arrow-left">
+          </label>
+
+          <label for="arrow-right" class="wrapper__label wrapper__label-arrow-right">
+          </label>
+        </div>
+
+        <div class="wrapper__sliders">
+          <div class="wrapper__slider wrapper__slider-slide1"></div>
+          <div class="wrapper__slider wrapper__slider-slide2"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="oferta" id="oferta">
+      <div class="grid">
+        <div class="grid__item grid__item--mobile-1-2 grid__item--tablet-2-5 grid__item--desktop-2-8">
+          <div class="oferta__info">
+            <div class="oferta__name">Oferta</div>
+            <div class="oferta__title">Działamy&nbsp;<i>kompleksowo</i></div>
+            <div class="oferta__text">
+              Oferujemy kompletną obsługę inwestycji terenów zielonych. Projektujemy nowoczesne ogrody przydomowe oraz
+              rezydencjonalne. Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w życie, a na każdym etapie
+              posłużymy radą i wieloletnim doświadczeniem.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="grid__item--mobile-1-2 grid__item--tablet-1-2 grid__item--desktop-1-4">
+          <div class="oferta__card">
+            <div class="oferta__card-icon">
+              <img src="/images/card-icon01.svg" alt="card-icon01">
+            </div>
+            <div class="oferta__card-title">Projekty</div>
+            <div class="oferta__card-info">
+              Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym wykorzystaniem
+              istniejącej przestrzeni.
+            </div>
+            <a href="#" class="oferta__card-link">
+              <div class="oferta__card-link-text">Dowiedz się więcej</div>
+              <img src="/images/card-arrow.svg" alt="card-arrow">
+            </a>
+          </div>
+        </div>
+
+        <div class="grid__item--mobile-1-2 grid__item--tablet-3-4 grid__item--desktop-5-8">
+          <div class="oferta__card">
+            <div class="oferta__card-icon">
+              <img src="/images/card-icon02.svg" alt="card-icon02">
+            </div>
+            <div class="oferta__card-title">Wizualizacje</div>
+            <div class="oferta__card-info">
+              Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru animowanego w technologii 3D.
+            </div>
+            <a href="#" class="oferta__card-link">
+              <div class="oferta__card-link-text">Dowiedz się więcej</div>
+              <img src="/images/card-arrow.svg" alt="card-arrow">
+            </a>
+          </div>
+        </div>
+
+        <div class="grid__item--mobile-1-2 grid__item--tablet-5-6 grid__item--desktop-9-12">
+          <div class="oferta__card">
+            <div class="oferta__card-icon">
+              <img src="/images/card-icon03.svg" alt="card-icon03">
+            </div>
+            <div class="oferta__card-title">Realizacje</div>
+            <div class="oferta__card-info">
+              Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i zaawansowanych technologii.
+            </div>
+            <a href="#" class="oferta__card-link">
+              <div class="oferta__card-link-text">Zobacz nasze realizacje</div>
+              <img src="/images/card-arrow.svg" alt="card-arrow">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about" id="about">
+      <div class="about__photo"></div>
+      <div class="grid">
+        <div class="grid__item--mobile-1-2 grid__item--tablet-4-6 grid__item--desktop-7-12">
+          <div class="about__info">
+            <div class="about__info-name">Oferta</div>
+            <div class="about__info-title">Tworzymy z&nbsp;<i>pasją</i></div>
+            <div class="about__info-text">
+              Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą wykwalifikowani projektanci oraz architekci,
+              których zadaniem jest rozpoznanie i realizacja potrzeb każdego Klienta. Nasza specjalizacja to
+              przestrzenie
+              nowoczesne, które charakteryzuje minimalizm, geometria i elegancka prostota. Tworzymy ogrody
+              małoobsługowe,
+              dostosowane do współczesnego trybu życia.
+            </div>
+            <a href="#" class="about__info-link">
+              <div class="about-info-link-text">Poznaj nas bliżej</div>
+              <img src="/images/poznaj-nas-arrow.svg" alt="arrow-right" class="about-info-link-arrow">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="realisation" id="realisation">
+      <div class="container container--size">
+        <div class="realisation__title">
+          <div class="realisation__title-name">Realizacje</div>
+          <div class="realisation__title-text">Nasze&nbsp;<i>projekty</i></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container container--size-full px-0">
+      <div class="gallery gallery--size" id="gallery">
+      <img
+        src="https://s3-alpha-sig.figma.com/img/5d1c/d9b9/1e56bc0d14c22b0ac5b9ae8e2bfbd5d1?Expires=1693180800&Signature=P3sBgWjZpZpgoFHqngv0MKQCEnuLpCuI3lXBGE~aAv3oNZXTWfqvPoRw-cE0nc8Hb~ilZl0NkyQxViP9Pb4AT2UarIRQ539xBg8b1mrHzTHIj9G0xPzMF5SMUvdJr02U7vakyEQqoG9R06~jf5yWVw0zhX-GB5AV28U9wK3UDhq50OrFwARQyd~9Uvlr2QVvc2FkDx2r0nErWSQGiwmJz5PmDd1Cgk~oePGifSsHOvfeuaB3BQShEMQ4sKSS2BLlolcUlp2edYAaP5LDFIo4X8meTIz5rnpvbjahWRtt8I6Lr9~BkpZ1uUVVglEXqBYcmr7CDO9o6sdsVl9YD2hTGg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+        alt="gallery-photo01"
+        id="show-modal-btn"
+        class="gallery__photo"
+      >
+      <img
+        src="https://s3-alpha-sig.figma.com/img/e595/eff0/256fb3185fa1a312c58e3e6d0335d0a5?Expires=1693180800&Signature=BvkWU-OGtVnl1jxNOZ3Er4jX6-m0zEcslrjYGXxXmHLlFy4zvUnQUH4RLlZ5i-O6ocNhH7DM323CrK3-HsRouYRTfyudiQ3eZ0~vEDZFqrNHP3chGN6CYhefGKlyl45ox6ryj8ScDlFrLAIKcbcLDOQvYDVOMdBo5EVnp~ckcB4abH2NiPGU5aCeyCz5f5cfiKGwqRmsvNumFO5EeApHV1fgHv2jRdbcO13nK~ypPK4ZnkxWwO1PncjxUPuVBThLABUlBAO~psNTqN9oRDMHDDI7NH~hF7tPLUICpZtw976MdXijmsad15VGuc~9iWxpR4EwVisZiS7mmb~GSB79cw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+        alt="gallery-photo02"
+        class="gallery__photo"
+      >
+      <img
+        src="https://s3-alpha-sig.figma.com/img/b00a/962e/56d48c9ca8fcabcc720d50ff6bafca47?Expires=1693180800&Signature=d3ZPp6VwjI9F~iGuAdjV06XQNOqZxKVg7~R7eyhIN9UKZ5uPdXaIc6p1Jq6jhy0dRGB40IxoHCwRcUcvGbsHvOs~5MZuAuNwKkJvBBexRRA-iX~L546d0EZUx0LoRxL4nq6MPfswOb2ViJJsVYI2r7v3pug6OzTIJ97mq2oUf~QDwdiYAF9Csjg~uiVRsEiLPnfxOWczYjnTpU~3wmDXA4PV0qBk~aEwclOUX5Qh7J87RD3LGiv2RRSUPxQettUmNoc7JQhAFXpveJ~gXihuUmI8pmVVUIXLoMxFIX9WBWNx2ebBcqCfie~vJuHs1JJjOzHzkNo~9KMzUt46thqGAQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+        alt="gallery-photo03"
+        class="gallery__photo"
+        >
+      <img
+        src="https://s3-alpha-sig.figma.com/img/da0b/6735/aad8b99dcbc4dbc394b9e74465d2ed25?Expires=1693180800&Signature=IRhGTNLUOmBHKSU5TPtd5-bJeAVnsLbObmmey0oPQAQyrOUOCuUZaWJmKZ1sHMMoBrdlk40Nz2MZj16hcPK~TCNEIzZnpO0Mg3pxgauOYm6Ht6eUy4FHRhiwQHZXKIIrx7jquDCHFKuKEvEtThLe4B1fFeAzSvyVkGLUIlM7OlFAiCHU5UQ7DRBh-fy4dnCmaRSIAfc3d4ci5Np~ZbUk99hINl9rLSP7tgzVeJAMPyDP-EAiAmyGWBWyGU8cdqh2Thv7aZU4v0cICbiuf3Qaw7n~Y5UhepygcHH~hdKnOnYrlOptmB5Q6pxpinDfWKccT8iGe7ljeHqqizyV9cczZg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+        alt="gallery-photo04"
+        class="gallery__photo"
+      >
+      <img
+        src="https://s3-alpha-sig.figma.com/img/24d7/efa5/a3c1f2854e87a31e5a248352efa0b04f?Expires=1693180800&Signature=fhhOVc-Qi8f4mnrjXo~e42hkPu-TorHkbq6adlRnRJxfs0M9gNPND~zN3jTnzDTEVrNWAAdu09WCOk65gEIpxaxZ5r9khMsXdIo35Db61BWVgbZ5Oiy6yJrGAQHiDbVGCpJxETiNQ1tKqbKD~hC7M3OnaXKronhDgtFdw7sAjV4xw0TIm8ZjNRtXrGBdVmn-G1qQVdPrPSytSIjElzHkB6heQvvzjOeYtFPAPn5nSyYGWAP2YILJEwkcYxBBh4hft-AD~BZpDJRhLlpMqZSxNG6UDFflwlyA3b4gpbq1mAQ8Hu73p9m6d0RrUbM750FVgv5GHUa7t5TpRqM19pMU~A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+        alt="gallery-photo05"
+        class="gallery__photo"
+      >
+      <img
+        src="https://s3-alpha-sig.figma.com/img/d23c/13bb/0b23a825357426c98af6bc74c90b66a0?Expires=1693180800&Signature=PHIcZitwB12IwI926rsszddq2iAEdfw7FVSrbGcxA25gpL4yAkUvWgUtBTljZU3W9D-w0yz21udXuOdbKlLgDZ8pNGwa-pEh7BsBI79NKS-1VTU0BG75s7WFt-Z83EV9ugA5YQQaxys2AGuSa9FOSryOxLW1ygdznq0zxPPI1awMSrbaWgnJAf97H4Y1YK0ERZ2gwrklruxvUc5rjk3ycMZAIdBhNY4MeW3tNP0uwhwuOsK-vX7txs81np~A4Z5REa~jH8JfrHBgbzrhiS-L1L5PAYxN2hHx9d2eOi68WmcOTdFpe56PcPWzoz1iYQ0LPbLQrDIM6cne5mV2Md10KQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+        alt="gallery-photo06"
+        class="gallery__photo"
+      >
+      <img
+        src="https://s3-alpha-sig.figma.com/img/44c5/e718/7084bf1c5c4627a274b27b4b0c39a7ea?Expires=1693180800&Signature=Rf2xr69bZS~NJgCLJqPAHivWYHfNL3rPQQMnHKSt3tt-~e3Lq9wviE2JG0sa48H7EiS4cHotqXuwd3QpMzo4-AGOOEL79dzwTs8fRrv8SQgzgpfXO66IbiJMgpPW9mDITmbR1RmArQ6juZL4W6o442RREPKpUw-LzMcbCWUr4UQLb3tw2wlc-UcaLXlJhGJVQA9Weoz8NeT~DKqJZerio7bKXea8dkqIewGht70-47RnZl06gudw~TCPeldaYpA9-WmGZ9ZijbqdUGLSzlN4oeT-iQIHNIhEFFVsarioIQ5-qVD7x-LV~TLJiHGg14fXWZaObcPq6KzCLJjlD-RVXw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+        alt="gallery-photo07"
+        class="gallery__photo"
+      >
+      <img
+        src="https://s3-alpha-sig.figma.com/img/0d71/3440/f1fc432e493a7d90348f7b35f9ad85ae?Expires=1693180800&Signature=jqS6LAg60bBh~Y3-WmJ-I~yyKVVUWrhISkB3KWsv~C~26wFbOhvvvOJPhwjkBRL-polHKg5n74pqn77COv7g38tkABbY7y7SIdbngVVwEUxFjHET9f5ZLTXjwPT9IDDOhrFJWQUhtW6t~D8OyGKMg~U-YgXfFG~fOtjoK0EYZCFn8GvlFjhX2e~b4RKccPSROojYGUxEWJ2tI95UA2eOFwjXkGgjPruIcqE~X6qaSqjDeud6QEHIt07YOz6elSXyMjqbZ8lG3kZTUASpIHjIcShej5lloEIJW9nsx8FuPt1TdYA5wLwDxFYEvv1cQ165TRnponyBxBNYlb2M2sMc4w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+        alt="gallery-photo08"
+        class="gallery__photo"
+      >
+      <img
+        src="https://s3-alpha-sig.figma.com/img/e209/1e78/d41f16c4301e5a7dfaeb13b24470a429?Expires=1693180800&Signature=gVCIxGLGbiPPw4kDNByl2~7B45vvjO-WZ~QBrox~JUtKgZnH~GjCLtlUKJcTXaeFWPbdz-wphI1wrAnats2FXR8tJh5VLVIwxJK8TL04p0RJ8Zb~dmKieWyGSvLwzzbLvPnbxADZOwJX-XFIW-TeQqgqZVaT2as9nTDu4pOAUQQTaD6aGTKBRhc~UQqZuXAmv61NDbtcgA4DrL511BF4XZszYP-CZGJbGDVN-lqOKL5zWLMM0VI6UbtOvlzfVxfUwxh0FbYe8nukN63x~3qPQhfcEH8RP~mcldvaZQMUbZId03DJf7NmQBM3WR500rC6l-XD-fA8jpdGXWAPIIsirA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+        alt="gallery-photo09"
+        class="gallery__photo"
+      >
+
+      <dialog style="padding: 0" class="modal__window">
+        <div id="modal-box" class="modal__window-box">
+          <div>
+            <img
+              src=""
+              alt="gallery-photo01"
+              class="modal__window-photo"
+              id="gallery-photo"
+            >
+          </div>
+          <button id="close-modal-btn" class="modal__window-button">Zamknij</button>
+        </div>
+      </dialog>
+      <button class="gallery__button" id="gallery-button">
+        <div class="gallery__button-text">Rozwiń</div>
+        <img src="/images/rozwin-arrow.svg" alt="arrow-down" class="gallery__button-arrow">
+      </button>
+    </div>
+    </div>
+    
+    <div class="contact" id="contact">
+      <div class="contact__container">
+        <div class="contact__title">
+          Zostańmy w kontakcie!
+          <br>
+          Znajdziesz nas na <i>Instagramie.</i>
+        </div>
+
+        <div class="contact__info">
+          <div class="contact__info-text">Śledź nasze najnowsze realizacje!</div>
+          <a href="https://instagram.com" class="contact__info-link">Instagram</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="grid">
+      <div class="grid__item--mobile-1-2 grid__item--tablet-1-6 grid__item--desktop-2-11">
+        <div class="footer__text-1">
+          <div class="footer__line">
+            <a href="#header" class="footer__logo">
+              <img src="/images/logo/logo-footer.svg" alt="logo-footer">
+            </a>
+  
+            <div class="footer__info">
+              <div class="footer__info-text">Daj znać, co możemy dla Ciebie zrobić!</div>
+              <a href="#" class="footer__info-link">Skontaktuj się z nami</a>
+            </div>
+          </div>
+          <div class="footer__line-1"></div>
+  
+
+          <div class="footer__line-2">
+            <div class="footer__links">
+              <a href="#" class="footer__links-item">Kontakt</a>
+              <a href="#" class="footer__links-item">Instagram</a>
+              <a href="#" class="footer__links-item">Facebook</a>
+              <a href="#" class="footer__links-item">LinkeIn</a>
+            </div>
+            <div class="footer__contact">
+              <a href="tel:000-000-000" class="footer__contact-item">000-000-000</a>
+              <a href="mailto:giarddesign@kontakt.pl" class="footer__contact-item">giarddesign@kontakt.pl</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__text-2">
+          <div class="footer__rights">Prawa zastrzeżone © 2022</div>
+
+          <div class="footer__made">
+            <div class="footer__made-text">made by</div>
+
+            <a href="#header" class="footer__made-link">
+              <img src="/images/logo/footer-logo-2.svg" alt="footer-logo2">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
 </html>

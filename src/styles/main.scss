@@ -1,7 +1,22 @@
 @import "utils";
-@import "fonts";
-@import "typography";
 
-body {
-  background: $c-gray;
+@import "./blocks/header.scss";
+@import "./blocks/nav.scss";
+@import "./blocks/menu.scss";
+@import "./blocks/container.scss";
+@import "./blocks/row.scss";
+@import "./blocks/col.scss";
+@import "./blocks/wrapper.scss";
+@import "./blocks/main.scss";
+@import "./blocks/grid.scss";
+@import "./blocks/oferta.scss";
+@import "./blocks/about.scss";
+@import "./blocks/realisation.scss";
+@import "./blocks/gallery.scss";
+@import "./blocks/modal__window.scss";
+@import "./blocks/contact.scss";
+@import "./blocks/footer.scss";
+
+html {
+  scroll-behavior: smooth;
 }

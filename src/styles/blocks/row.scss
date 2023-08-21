@@ -1,0 +1,14 @@
+
+.row {
+  &--size {
+    width: 100%;
+    max-width: $window-wingth;
+
+    margin: 0 auto;
+    flex-wrap: nowrap;
+
+    @include onTablet {
+      padding-bottom: 100px;
+    }
+  }
+}

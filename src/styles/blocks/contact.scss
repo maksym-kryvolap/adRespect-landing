@@ -1,0 +1,119 @@
+
+.contact {
+  position: relative;
+  padding: 60px 0;
+  background-color: $color-grey;
+  color: $color-grey;
+  margin: 0 auto;
+
+  @include onTablet {
+    padding: 50px 30px;
+  }
+
+  @include onDesktop {
+    padding: 60px 0;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 120px 110px;
+    background-color: $color-green;
+    max-width: 1040px;
+    width: 100%;
+    margin: 0 auto;
+
+    @include onMobile {
+      display: block;
+      padding: 10px 10px 60px;
+    }
+  }
+
+  &__title {
+    padding-top: 22px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+
+    letter-spacing: -2px;
+    width: 599px;
+
+    @include onMobile {
+      font-size: 26px;
+      line-height: 30px;
+      margin-bottom: 40px;
+    }
+
+    @include onTablet {
+      font-size: 34px;
+      line-height: 42px;
+    }
+
+    @include onDesktop {
+      font-size: 40px;
+      line-height: 48px;
+    }
+  }
+
+  &__info {
+    width: 157px;
+    display: flex;
+    flex-direction: column;
+
+    @include onMobile {
+      flex-direction: row;
+      column-gap: 10px;
+      width: 100%;
+      height: max-content;
+    }
+
+    &-text {
+      font-family: "Inter", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -.01rem;
+      margin-bottom: 24px;
+      width: 157px;
+
+      @include onTablet {
+        font-size: 12px;
+        line-height: 20px;
+      }
+
+      @include onDesktop {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    &-link {
+      text-decoration: none;
+      background-color: $color-grey;
+      color: $color-green;
+      border-radius: 200px;
+      padding: 10px 24px 12px;
+      width: max-content;
+      transition: all 0.3s;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      @include onMobile {
+        height: max-content;
+      }
+
+      @include onTablet {
+        font-size: 12px;
+        line-height: 20px;
+        padding: 5px 12px 6px;
+      }
+
+      @include onDesktop {
+        font-size: 16px;
+        line-height: 24px;
+        padding: 12px 24px;
+      }
+    }
+  }
+}

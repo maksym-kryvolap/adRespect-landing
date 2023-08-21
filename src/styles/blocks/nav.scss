@@ -1,0 +1,129 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: $window-wingth;
+  height: $nav-height;
+  margin: 0 auto;
+
+  @include onMobile() {
+    padding: 0 10px;
+  }
+
+  @include onTablet {
+    padding: 0 30px;
+  }
+
+  @include onDesktop {
+    padding: 0;
+  }
+
+  &__logo {
+    &-link {
+      width: 114px;
+      height: 19px;
+      background-position: 0 0;
+    }
+
+    @include onMobile {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__menu {
+    display: none;
+    background: url(../images/logo/menu-logo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 24px;
+    width: 24px;
+    text-decoration: none;
+    margin-left: 35px;
+
+    @include onMobile {
+      display: block;
+    }
+
+    @include onTablet {
+      display: none;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 48px;
+    height: 24px;
+
+    @include onMobile {
+      display: none;
+    }
+  }
+
+  &__link {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    text-decoration: none;
+    color: #111;
+    transition: all 0.5s;
+    border-bottom: 1px solid #fff;
+
+    &:hover {
+      border-bottom: 1px solid black;
+    }
+
+    &--select {
+      border: 1px solid #fff;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+
+  &__label {
+    background: url(/images/iconSearch.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    transition: all 0.5s;
+    border-bottom: 1px solid #fff;
+
+    &:hover {
+      border-bottom: 1px solid black;
+    }
+
+    &--mobile {
+      @include onMobile {
+        display: block;
+      }
+
+      @include onTablet {
+        display: none;
+      }
+
+      @include onDesktop {
+        display: none;
+      }
+    }
+  }
+
+  &__input {
+    display: none;
+    border: 0.5px solid black;
+    border-radius: 200px;
+
+    &:focus {
+      border: 0.5px solid black;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+
+.col {
+  &--size {
+    max-width: 50%;
+    box-sizing: border-box;
+
+    @include onMobile {
+      max-width: 100%;
+    }
+  }
+}
